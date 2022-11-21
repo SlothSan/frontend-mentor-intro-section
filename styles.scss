@@ -13,9 +13,14 @@ body {
   font-size: 18px;
   font-family: 'Epilogue', sans-serif;
   font-weight: 500;
+  background-color: $almost-white;
 
   main {
     width: 100%;
+
+    .hidden {
+      display: none !important;
+    }
 
     .nav-bar {
       display: flex;
@@ -32,10 +37,27 @@ body {
         width: 32px;
       }
 
+      .nav-bar-menu-close {
+        height: 24px;
+        width: 24px;
+      }
+
       .nav-bar-container {
-        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
         width: 240px;
         height: 100%;
+        padding: 0 20px;
+        background-color: $almost-white;
+
+        .nav-bar-link {
+          text-decoration: none;
+          margin: 15px 0;
+          color: $medium-gray;
+        }
       }
     }
   }
