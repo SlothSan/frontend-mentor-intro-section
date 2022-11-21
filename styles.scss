@@ -83,7 +83,30 @@ body {
     }
 
     .companies-container {
+      margin-top: 40px;
       display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+
+      .databiz-logo {
+        width: 82px;
+        height: 15px;
+      }
+
+      .audiophile-logo {
+        width: 53px;
+        height: 26px;
+      }
+
+      .meet-logo {
+        width: 64px;
+        height: 14px;
+      }
+
+      .maker-logo {
+        width: 59px;
+        height: 17px;
+      }
     }
   }
 }
