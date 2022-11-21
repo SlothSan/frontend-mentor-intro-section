@@ -20,7 +20,29 @@
         <img id="nav-bar-menu-close" class="nav-bar-menu-close hidden" src="images/icon-close-menu.svg"
              alt="close menu image"/>
         <div id="nav-bar-container" class="nav-bar-container hidden">
-            <a class="nav-bar-link" href="#">Features</a>
+            <a id="open-features-menu" class="nav-bar-link" href="#">Features
+                <img id="arrow-down-features" class="arrow-down" src="images/icon-arrow-down.svg"
+                     alt="arrow down icon"/>
+                <img id="arrow-up-features" class="arrow-up hidden" src="images/icon-arrow-up.svg"
+                     alt="arrow up icon"/></a>
+            <div id="features-dropdown" class="dropdown hidden">
+                <a class="feature-link dropdown-link">
+                    <img class="feature-image dropdown-image" src="images/icon-todo.svg" alt="feature-image"/>
+                    Todo List
+                </a>
+                <a class="calendar-link dropdown-link">
+                    <img class="feature-image dropdown-image" src="images/icon-calendar.svg" alt="calendar-image"/>
+                    Calendar
+                </a>
+                <a class="feature-link dropdown-link">
+                    <img class="feature-image dropdown-image" src="images/icon-reminders.svg" alt="reminder-image"/>
+                    Reminders
+                </a>
+                <a class="feature-link dropdown-link">
+                    <img class="feature-image dropdown-image" src="images/icon-planning.svg" alt="planning-image"/>
+                    Planning
+                </a>
+            </div>
             <a class="nav-bar-link" href="#">Company</a>
             <a class="nav-bar-link" href="#">Careers</a>
             <a class="nav-bar-link" href="#">About</a>

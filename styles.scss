@@ -74,6 +74,33 @@ body {
           color: $medium-gray;
         }
 
+        .arrow-down,
+        .arrow-up {
+          padding-left: 20px;
+        }
+
+        .dropdown {
+          width: 100%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          color: $medium-gray;
+          font-size: 0.9rem;
+
+          .dropdown-link {
+            margin: 10px 0;
+
+            .dropdown-image {
+              height: auto;
+              width: 30px;
+              padding-right: 10px;
+            }
+          }
+
+
+        }
+
         .links-container {
           display: flex;
           flex-direction: column;
