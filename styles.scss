@@ -81,10 +81,11 @@ body {
 
         .dropdown {
           width: 100%;
-          padding: 20px;
+          padding: 10px 30px;
           display: flex;
           flex-direction: column;
-          text-align: center;
+          justify-content: center;
+          align-content: center;
           color: $medium-gray;
           font-size: 0.9rem;
 
