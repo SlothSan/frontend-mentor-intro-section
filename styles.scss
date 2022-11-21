@@ -64,13 +64,26 @@ body {
         flex-direction: column;
         width: 240px;
         height: 100%;
-        padding: 0 20px;
+        padding: 70px 20px 0 20px;
         background-color: $almost-white;
 
         .nav-bar-link {
+          font-size: 0.9rem;
           text-decoration: none;
-          margin: 15px 0;
+          margin: 15px 0 10px 0;
           color: $medium-gray;
+        }
+
+        .links-container {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          .registration-link {
+            border: 2px solid $medium-gray;
+            padding: 10px;
+            border-radius: 10px;
+          }
         }
       }
     }
