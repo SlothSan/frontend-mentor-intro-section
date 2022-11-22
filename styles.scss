@@ -161,6 +161,12 @@ body {
         border-radius: 15px;
         font-size: 1rem
       }
+
+      .intro-link:hover {
+        color: $almost-black;
+        background-color: $almost-white;
+        border: 1px solid $almost-black;
+      }
     }
 
     .companies-container {
@@ -205,6 +211,7 @@ body {
         color: $medium-gray;
         display: flex !important;
         justify-content: space-between;
+        font-size: 0.9rem;
 
         .navbar-desktop-left {
           padding-left: 50px;
@@ -214,8 +221,19 @@ body {
               padding-left: 5px;
             }
 
-            font-size: 0.9rem;
             padding-left: 25px;
+          }
+        }
+
+        .navbar-desktop-right {
+          .registration-link-desktop {
+            border: 2px solid $medium-gray;
+            padding: 12px 20px;
+            border-radius: 10px;
+          }
+
+          .login-desktop {
+            padding-right: 40px;
           }
         }
       }
