@@ -13,6 +13,20 @@ $white: hsl(0, 0%, 100%);
   color: $medium-gray;
 }
 
+@mixin link-button {
+  color: $almost-white;
+  background-color: $almost-black;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1rem
+}
+
+@mixin link-hover {
+  color: $almost-black;
+  background-color: $almost-white;
+  border: 1px solid $almost-black;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -165,20 +179,14 @@ body {
 
       .intro-link {
         margin-top: 25px;
-        color: $almost-white;
-        background-color: $almost-black;
+        @include link-button;
         width: 136px;
         height: 48px;
-        text-align: center;
         line-height: 50px;
-        border-radius: 15px;
-        font-size: 1rem
       }
 
       .intro-link:hover {
-        color: $almost-black;
-        background-color: $almost-white;
-        border: 1px solid $almost-black;
+        @include link-hover;
       }
     }
 
@@ -293,6 +301,7 @@ body {
 
     .desktop-right-container {
       width: 30%;
+      margin-top: -130px;
 
       .desktop-hero-image {
         width: 480px;
@@ -303,6 +312,11 @@ body {
     .desktop-left-container {
       width: 45%;
       margin-right: 180px;
+      margin-top: -40px;
+
+      .desktop-title {
+        margin-top: 20px;
+      }
 
       .desktop-title,
       .desktop-subtitle {
@@ -313,6 +327,47 @@ body {
         width: 90%;
         padding-top: 50px;
         color: $medium-gray;
+      }
+
+      .desktop-link {
+        line-height: 195px;
+        @include link-button;
+        padding: 20px 30px;
+        width: 163px;
+        height: 56px;
+        font-size: 1.1rem;
+      }
+
+      .desktop-link:hover {
+        @include link-hover;
+      }
+
+      .companies-container-desktop {
+        margin-top: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+
+        .databiz-logo {
+          width: 113px;
+          height: 20px;
+        }
+
+        .audiophile-logo {
+          width: 73px;
+          height: 36px;
+        }
+
+        .meet-logo {
+          width: 89px;
+          height: 20px;
+        }
+
+        .maker-logo {
+          width: 82px;
+          height: 24px;
+        }
       }
 
     }
