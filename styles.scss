@@ -291,9 +291,30 @@ body {
     display: flex;
     padding: 180px 160px;
 
-    .desktop-left-container,
     .desktop-right-container {
-      width: 50%;
+      width: 30%;
+
+      .desktop-hero-image {
+        width: 480px;
+        height: 640px;
+      }
+    }
+
+    .desktop-left-container {
+      width: 45%;
+      margin-right: 180px;
+
+      .desktop-title,
+      .desktop-subtitle {
+        font-size: 4.8rem;
+      }
+
+      .desktop-text {
+        width: 90%;
+        padding-top: 50px;
+        color: $medium-gray;
+      }
+
     }
   }
 }
