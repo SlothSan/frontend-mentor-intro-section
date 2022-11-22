@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  background-color: hsl(0deg, 0%, 98%);
+}
+body main {
+  width: 100%;
+}
+body main a {
+  cursor: pointer;
+}
+body main .hidden {
+  display: none !important;
+}
+body main .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0deg, 0%, 41%, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+body main .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px 20px 20px;
+}
+body main .nav-bar .navbar-desktop-container {
+  display: none;
+}
+body main .nav-bar .nav-bar-logo {
+  height: 25px;
+  width: 80px;
+}
+body main .nav-bar .nav-bar-menu-open {
+  height: 18px;
+  width: 32px;
+  z-index: 3;
+}
+body main .nav-bar .nav-bar-menu-close {
+  height: 24px;
+  width: 24px;
+  z-index: 3;
+}
+body main .nav-bar .nav-bar-container {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 100%;
+  padding: 70px 20px 0 20px;
+  background-color: hsl(0deg, 0%, 98%);
+}
+body main .nav-bar .nav-bar-container .nav-bar-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin: 15px 0 10px 0;
+  color: hsl(0deg, 0%, 41%);
+}
+body main .nav-bar .nav-bar-container .arrow-down,
+body main .nav-bar .nav-bar-container .arrow-up {
+  padding-left: 20px;
+}
+body main .nav-bar .nav-bar-container .dropdown {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: hsl(0deg, 0%, 41%);
+  width: 100%;
+  font-size: 0.9rem;
+}
+body main .nav-bar .nav-bar-container .dropdown .dropdown-link {
+  margin: 10px 0;
+}
+body main .nav-bar .nav-bar-container .dropdown .dropdown-link .dropdown-image {
+  height: auto;
+  width: 30px;
+  padding-right: 10px;
+}
+body main .nav-bar .nav-bar-container .links-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body main .nav-bar .nav-bar-container .links-container .registration-link {
+  border: 2px solid hsl(0deg, 0%, 41%);
+  padding: 10px;
+  border-radius: 10px;
+}
+body .content-container-desktop {
+  display: none;
+}
+body .content-container {
+  width: 100%;
+}
+body .content-container .mobile-hero-image {
+  width: 100%;
+  height: 100%;
+}
+body .content-container .content-text-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .content-container .content-text-container .intro-title {
+  color: hsl(0deg, 0%, 8%);
+  font-size: 2.2rem;
+}
+body .content-container .content-text-container .intro-text {
+  margin-top: 25px;
+  font-size: 1rem;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 1.5rem;
+  color: hsl(0deg, 0%, 41%);
+}
+body .content-container .content-text-container .intro-link {
+  margin-top: 25px;
+  color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 8%);
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1rem;
+  width: 136px;
+  height: 48px;
+  line-height: 50px;
+}
+body .content-container .content-text-container .intro-link:hover {
+  color: hsl(0deg, 0%, 8%);
+  background-color: hsl(0deg, 0%, 98%);
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+body .content-container .companies-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 50px 20px;
+}
+body .content-container .companies-container .databiz-logo {
+  width: 82px;
+  height: 15px;
+}
+body .content-container .companies-container .audiophile-logo {
+  width: 53px;
+  height: 26px;
+}
+body .content-container .companies-container .meet-logo {
+  width: 64px;
+  height: 14px;
+}
+body .content-container .companies-container .maker-logo {
+  width: 59px;
+  height: 17px;
+}
+body .content-container .content-container-desktop {
+  display: none !important;
+}
+@media (min-width: 1000px) {
+  body .nav-bar {
+    padding: 30px 40px 20px 40px !important;
+  }
+  body .nav-bar .nav-bar-menu-open,
+body .nav-bar .nav-bar-menu-close {
+    display: none;
+  }
+  body .nav-bar .navbar-desktop-container {
+    width: 100%;
+    color: hsl(0deg, 0%, 41%);
+    display: flex !important;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  body .nav-bar .navbar-desktop-container .navbar-desktop-left {
+    padding-left: 50px;
+  }
+  body .nav-bar .navbar-desktop-container .navbar-desktop-left a {
+    padding-left: 25px;
+  }
+  body .nav-bar .navbar-desktop-container .navbar-desktop-left a img {
+    padding-left: 5px;
+  }
+  body .nav-bar .navbar-desktop-container .navbar-desktop-right .registration-link-desktop {
+    border: 2px solid hsl(0deg, 0%, 41%);
+    padding: 12px 20px;
+    border-radius: 10px;
+  }
+  body .nav-bar .navbar-desktop-container .navbar-desktop-right .login-desktop {
+    padding-right: 40px;
+  }
+  body .dropdown-desktop {
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: hsl(0deg, 0%, 41%);
+    background-color: hsl(0deg, 0%, 100%);
+    font-size: 0.9rem;
+    border-radius: 10px;
+    width: auto;
+  }
+  body .dropdown-desktop a {
+    padding: 10px 0 !important;
+  }
+  body .dropdown-desktop a img {
+    margin-right: 10px !important;
+  }
+  body .company-dropdown-desktop {
+    left: 185px;
+  }
+  body .company-dropdown-desktop a {
+    padding: 15px 0 !important;
+  }
+  body .mobile-hero-image,
+body .content-container {
+    display: none;
+  }
+  body .content-container-desktop {
+    display: flex;
+    padding: 180px 160px;
+  }
+  body .content-container-desktop .desktop-right-container {
+    width: 30%;
+    margin-top: -130px;
+  }
+  body .content-container-desktop .desktop-right-container .desktop-hero-image {
+    width: 480px;
+    height: 640px;
+  }
+  body .content-container-desktop .desktop-left-container {
+    width: 45%;
+    margin-right: 180px;
+    margin-top: -40px;
+  }
+  body .content-container-desktop .desktop-left-container .desktop-title {
+    margin-top: 20px;
+  }
+  body .content-container-desktop .desktop-left-container .desktop-title,
+body .content-container-desktop .desktop-left-container .desktop-subtitle {
+    font-size: 4.8rem;
+  }
+  body .content-container-desktop .desktop-left-container .desktop-text {
+    width: 90%;
+    padding-top: 50px;
+    color: hsl(0deg, 0%, 41%);
+  }
+  body .content-container-desktop .desktop-left-container .desktop-link {
+    line-height: 195px;
+    color: hsl(0deg, 0%, 98%);
+    background-color: hsl(0deg, 0%, 8%);
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 20px 30px;
+    width: 163px;
+    height: 56px;
+    font-size: 1.1rem;
+  }
+  body .content-container-desktop .desktop-left-container .desktop-link:hover {
+    color: hsl(0deg, 0%, 8%);
+    background-color: hsl(0deg, 0%, 98%);
+    border: 1px solid hsl(0deg, 0%, 8%);
+  }
+  body .content-container-desktop .desktop-left-container .companies-container-desktop {
+    margin-top: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  body .content-container-desktop .desktop-left-container .companies-container-desktop .databiz-logo {
+    width: 113px;
+    height: 20px;
+  }
+  body .content-container-desktop .desktop-left-container .companies-container-desktop .audiophile-logo {
+    width: 73px;
+    height: 36px;
+  }
+  body .content-container-desktop .desktop-left-container .companies-container-desktop .meet-logo {
+    width: 89px;
+    height: 20px;
+  }
+  body .content-container-desktop .desktop-left-container .companies-container-desktop .maker-logo {
+    width: 82px;
+    height: 24px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
