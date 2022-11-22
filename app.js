@@ -9,6 +9,12 @@ const arrowUpCompany = document.getElementById('arrow-up-company');
 const featuresDropdown = document.getElementById('features-dropdown');
 const companyDropdown = document.getElementById('company-dropdown');
 const navBarContainer = document.getElementById('nav-bar-container');
+const featuresDropdownDesktop = document.getElementById('features-dropdown-desktop');
+const featuresDropdownOpen = document.getElementById('features-dropdown-desktop-open');
+const featuresDropdownClose = document.getElementById('features-dropdown-desktop-close')
+const featuresDropdownContainer = document.getElementById('features-dropdown-desktop-container');
+const companyDropdownDesktop = document.getElementById('company-dropdown-desktop');
+const companyDropdownArrow = document.getElementById('company-dropdown-desktop-open')
 const overlay = document.getElementById('overlay');
 
 const handleMenu = () => {
@@ -31,7 +37,15 @@ const handleCompanyClick = () => {
 
 }
 
+const handleFeaturesClickDesktop = () => {
+    featuresDropdownOpen.classList.toggle('hidden');
+    featuresDropdownClose.classList.toggle('hidden');
+    featuresDropdownContainer.classList.toggle('hidden');
+
+}
+
 navBarOpen.addEventListener('click', handleMenu);
 navBarClose.addEventListener('click', handleMenu);
 openFeatures.addEventListener('click', handleFeaturesClick);
 openCompanies.addEventListener('click', handleCompanyClick);
+featuresDropdownDesktop.addEventListener('click', handleFeaturesClickDesktop);

@@ -19,6 +19,10 @@ body {
   main {
     width: 100%;
 
+    a {
+      cursor: pointer;
+    }
+
     .hidden {
       display: none !important;
     }
@@ -237,6 +241,14 @@ body {
           }
         }
       }
+    }
+    .dropdown-desktop {
+      position: absolute;
+      top: 20px;
+    }
+
+    .mobile-hero-image {
+      display: none;
     }
   }
 }

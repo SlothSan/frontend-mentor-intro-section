@@ -21,10 +21,18 @@
              alt="close menu image"/>
         <div class="navbar-desktop-container">
             <div class="navbar-desktop-left">
-                <a>Features <img id="" class="arrow-down" src="images/icon-arrow-down.svg"
-                                 alt="arrow down icon"/></a>
-                <a>Company <img id="" class="arrow-down" src="images/icon-arrow-down.svg"
-                                alt="arrow down icon"/></a>
+                <a id="features-dropdown-desktop">Features
+                    <img id="features-dropdown-desktop-open" class="arrow-down"
+                         src="images/icon-arrow-down.svg"
+                         alt="arrow down icon"/>
+                    <img id="features-dropdown-desktop-close" class="arrow-up hidden" src="images/icon-arrow-up.svg"
+                         alt="arrow up icon"/></a>
+                <div id="features-dropdown-desktop-container" class="dropdown-desktop hidden">
+                    I'm a dropdown
+                </div>
+                <a id="company-dropdown-desktop">Company <img id="company-dropdown-desktop-open" class="arrow-down"
+                                                              src="images/icon-arrow-down.svg"
+                                                              alt="arrow down icon"/></a>
                 <a>Careers</a>
                 <a>About</a>
             </div>
