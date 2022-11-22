@@ -217,6 +217,9 @@ body {
       }
     }
 
+    .content-container-desktop {
+      display: none !important;
+    }
   }
 
   @media (min-width: 1000px) {
@@ -293,83 +296,83 @@ body {
       display: none;
     }
 
-  }
 
-  .content-container-desktop {
-    display: flex;
-    padding: 180px 160px;
+    .content-container-desktop {
+      display: flex;
+      padding: 180px 160px;
 
-    .desktop-right-container {
-      width: 30%;
-      margin-top: -130px;
+      .desktop-right-container {
+        width: 30%;
+        margin-top: -130px;
 
-      .desktop-hero-image {
-        width: 480px;
-        height: 640px;
-      }
-    }
-
-    .desktop-left-container {
-      width: 45%;
-      margin-right: 180px;
-      margin-top: -40px;
-
-      .desktop-title {
-        margin-top: 20px;
-      }
-
-      .desktop-title,
-      .desktop-subtitle {
-        font-size: 4.8rem;
-      }
-
-      .desktop-text {
-        width: 90%;
-        padding-top: 50px;
-        color: $medium-gray;
-      }
-
-      .desktop-link {
-        line-height: 195px;
-        @include link-button;
-        padding: 20px 30px;
-        width: 163px;
-        height: 56px;
-        font-size: 1.1rem;
-      }
-
-      .desktop-link:hover {
-        @include link-hover;
-      }
-
-      .companies-container-desktop {
-        margin-top: 45px;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-end;
-
-        .databiz-logo {
-          width: 113px;
-          height: 20px;
-        }
-
-        .audiophile-logo {
-          width: 73px;
-          height: 36px;
-        }
-
-        .meet-logo {
-          width: 89px;
-          height: 20px;
-        }
-
-        .maker-logo {
-          width: 82px;
-          height: 24px;
+        .desktop-hero-image {
+          width: 480px;
+          height: 640px;
         }
       }
 
+      .desktop-left-container {
+        width: 45%;
+        margin-right: 180px;
+        margin-top: -40px;
+
+        .desktop-title {
+          margin-top: 20px;
+        }
+
+        .desktop-title,
+        .desktop-subtitle {
+          font-size: 4.8rem;
+        }
+
+        .desktop-text {
+          width: 90%;
+          padding-top: 50px;
+          color: $medium-gray;
+        }
+
+        .desktop-link {
+          line-height: 195px;
+          @include link-button;
+          padding: 20px 30px;
+          width: 163px;
+          height: 56px;
+          font-size: 1.1rem;
+        }
+
+        .desktop-link:hover {
+          @include link-hover;
+        }
+
+        .companies-container-desktop {
+          margin-top: 45px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .databiz-logo {
+            width: 113px;
+            height: 20px;
+          }
+
+          .audiophile-logo {
+            width: 73px;
+            height: 36px;
+          }
+
+          .meet-logo {
+            width: 89px;
+            height: 20px;
+          }
+
+          .maker-logo {
+            width: 82px;
+            height: 24px;
+          }
+        }
+
+      }
     }
   }
 }
