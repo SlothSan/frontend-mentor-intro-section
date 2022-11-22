@@ -2,6 +2,30 @@ $almost-black: hsl(0, 0%, 8%);
 $medium-gray: hsl(0, 0%, 41%);
 $background-gray: hsla(0, 0%, 41%, 0.5);
 $almost-white: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+@mixin dropdown-styling {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: $medium-gray;
+}
+
+@mixin link-button {
+  color: $almost-white;
+  background-color: $almost-black;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1rem
+}
+
+@mixin link-hover {
+  color: $almost-black;
+  background-color: $almost-white;
+  border: 1px solid $almost-black;
+}
 
 * {
   margin: 0;
@@ -18,6 +42,10 @@ body {
 
   main {
     width: 100%;
+
+    a {
+      cursor: pointer;
+    }
 
     .hidden {
       display: none !important;
@@ -37,6 +65,10 @@ body {
       display: flex;
       justify-content: space-between;
       padding: 30px 20px 20px 20px;
+
+      .navbar-desktop-container {
+        display: none;
+      }
 
       .nav-bar-logo {
         height: 25px;
@@ -80,13 +112,8 @@ body {
         }
 
         .dropdown {
+          @include dropdown-styling;
           width: 100%;
-          padding: 10px 30px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-content: center;
-          color: $medium-gray;
           font-size: 0.9rem;
 
           .dropdown-link {
@@ -117,12 +144,16 @@ body {
     }
   }
 
+  .content-container-desktop {
+    display: none;
+  }
+
   .content-container {
     width: 100%;
 
     .mobile-hero-image {
       width: 100%;
-      height: 282px;
+      height: 100%;
     }
 
     .content-text-container {
@@ -148,14 +179,14 @@ body {
 
       .intro-link {
         margin-top: 25px;
-        color: $almost-white;
-        background-color: $almost-black;
+        @include link-button;
         width: 136px;
         height: 48px;
-        text-align: center;
         line-height: 50px;
-        border-radius: 15px;
-        font-size: 1rem
+      }
+
+      .intro-link:hover {
+        @include link-hover;
       }
     }
 
@@ -163,7 +194,7 @@ body {
       margin-top: 40px;
       display: flex;
       justify-content: space-between;
-      padding: 0 20px;
+      padding: 0 20px 50px 20px;
 
       .databiz-logo {
         width: 82px;
@@ -183,6 +214,164 @@ body {
       .maker-logo {
         width: 59px;
         height: 17px;
+      }
+    }
+
+    .content-container-desktop {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .nav-bar {
+      padding: 30px 40px 20px 40px !important;
+
+      .nav-bar-menu-open,
+      .nav-bar-menu-close {
+        display: none;
+      }
+
+      .navbar-desktop-container {
+        width: 100%;
+        color: $medium-gray;
+        display: flex !important;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        position: relative;
+
+        .navbar-desktop-left {
+          padding-left: 50px;
+
+          a {
+            img {
+              padding-left: 5px;
+            }
+
+            padding-left: 25px;
+          }
+        }
+
+        .navbar-desktop-right {
+          .registration-link-desktop {
+            border: 2px solid $medium-gray;
+            padding: 12px 20px;
+            border-radius: 10px;
+          }
+
+          .login-desktop {
+            padding-right: 40px;
+          }
+        }
+      }
+    }
+    .dropdown-desktop {
+      position: absolute;
+      top: 40px;
+      left: -10px;
+      @include dropdown-styling;
+      background-color: $white;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      width: auto;
+
+      a {
+        padding: 10px 0 !important;
+
+        img {
+          margin-right: 10px !important;
+        }
+      }
+    }
+
+    .company-dropdown-desktop {
+      left: 185px;
+
+      a {
+        padding: 15px 0 !important;
+      }
+    }
+
+    .mobile-hero-image,
+    .content-container {
+      display: none;
+    }
+
+
+    .content-container-desktop {
+      display: flex;
+      padding: 180px 160px;
+
+      .desktop-right-container {
+        width: 30%;
+        margin-top: -130px;
+
+        .desktop-hero-image {
+          width: 480px;
+          height: 640px;
+        }
+      }
+
+      .desktop-left-container {
+        width: 45%;
+        margin-right: 180px;
+        margin-top: -40px;
+
+        .desktop-title {
+          margin-top: 20px;
+        }
+
+        .desktop-title,
+        .desktop-subtitle {
+          font-size: 4.8rem;
+        }
+
+        .desktop-text {
+          width: 90%;
+          padding-top: 50px;
+          color: $medium-gray;
+        }
+
+        .desktop-link {
+          line-height: 195px;
+          @include link-button;
+          padding: 20px 30px;
+          width: 163px;
+          height: 56px;
+          font-size: 1.1rem;
+        }
+
+        .desktop-link:hover {
+          @include link-hover;
+        }
+
+        .companies-container-desktop {
+          margin-top: 45px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .databiz-logo {
+            width: 113px;
+            height: 20px;
+          }
+
+          .audiophile-logo {
+            width: 73px;
+            height: 36px;
+          }
+
+          .meet-logo {
+            width: 89px;
+            height: 20px;
+          }
+
+          .maker-logo {
+            width: 82px;
+            height: 24px;
+          }
+        }
+
       }
     }
   }
