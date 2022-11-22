@@ -2,6 +2,16 @@ $almost-black: hsl(0, 0%, 8%);
 $medium-gray: hsl(0, 0%, 41%);
 $background-gray: hsla(0, 0%, 41%, 0.5);
 $almost-white: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+@mixin dropdown-styling {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: $medium-gray;
+}
 
 * {
   margin: 0;
@@ -88,13 +98,8 @@ body {
         }
 
         .dropdown {
+          @include dropdown-styling;
           width: 100%;
-          padding: 10px 30px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-content: center;
-          color: $medium-gray;
           font-size: 0.9rem;
 
           .dropdown-link {
@@ -216,6 +221,7 @@ body {
         display: flex !important;
         justify-content: space-between;
         font-size: 0.9rem;
+        position: relative;
 
         .navbar-desktop-left {
           padding-left: 50px;
@@ -244,7 +250,21 @@ body {
     }
     .dropdown-desktop {
       position: absolute;
-      top: 20px;
+      top: 40px;
+      left: -10px;
+      @include dropdown-styling;
+      background-color: $white;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      width: auto;
+
+      a {
+        padding: 10px 0 !important;
+
+        img {
+          margin-right: 10px !important;
+        }
+      }
     }
 
     .mobile-hero-image {
